@@ -71,10 +71,10 @@ void handler(int signal) {
     	alarm(1);//set the quantom
         //Swap between threads
         int numOfThreads = thread_index;
-        int last_thread = currThreadNum % numOfThreads;
-    	currThreadNum = ((currThreadNum+ 1) % numOfThreads) ;
+        int previousThread = currThreadNum % numOfThreads;
+    	currThreadNum = ((currThreadNum + 1) % numOfThreads) ;
         threads_table[currThreadNum].vtime += 100;
-    	if(swapcontext(&((threads_table[currThreadNum]).uc),&((threads_table[last_thread]).uc)) == -1)
+    	if(swapcontext(&((threads_table[previousThread]).uc),&((threads_table[currThreadNum]).uc)) == -1)
         {
             perror("Error: swithcing between threads");
             exit(1);
@@ -104,7 +104,7 @@ int ut_start(void){
     //start running the first thread
     alarm(1);
     currThreadNum = 0;
-    ut_slot_t s = threads_table[currThreadNum+1];
+    ut_slot_t s = threads_table[currThreadNum];
     if(swapcontext(&mainc, &s.uc) == -1)
         return SYS_ERR;
 
