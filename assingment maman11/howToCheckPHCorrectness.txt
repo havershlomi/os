@@ -1,0 +1,79 @@
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ ./ph 5
+Spawned thread #1
+Spawned thread #2
+Spawned thread #3
+Spawned thread #4
+Spawned thread #5
+Philosopher (1) - time 1460296592951 - is thinking
+Philosopher (2) - time 1460296593951 - is thinking
+Philosopher (3) - time 1460296594951 - is thinking
+Philosopher (4) - time 1460296595951 - is thinking
+Philosopher (4) - time 1460296596622 - is hungry
+Philosopher (4) - time 1460296596622 - is eating
+Philosopher (5) - time 1460296596951 - is thinking
+Philosopher (5) - time 1460296597622 - is hungry
+Philosopher (5) - time 1460296597622 - is eating
+Philosopher (2) - time 1460296599294 - is hungry
+Philosopher (2) - time 1460296599294 - is eating
+Philosopher (1) - time 1460296603635 - is hungry
+Philosopher (3) - time 1460296604650 - is hungry
+Philosopher (5) - time 1460296605662 - is thinking
+Philosopher (1) - time 1460296606650 - is eating
+Philosopher (2) - time 1460296608007 - is thinking
+Philosopher (3) - time 1460296608650 - is eating
+Philosopher (4) - time 1460296610013 - is thinking
+Philosopher (1) - time 1460296611993 - is thinking
+Philosopher (4) - time 1460296614685 - is hungry
+Philosopher (2) - time 1460296617054 - is hungry
+Philosopher (3) - time 1460296617067 - is thinking
+Philosopher (4) - time 1460296618054 - is eating
+Philosopher (5) - time 1460296619425 - is hungry
+Philosopher (2) - time 1460296620425 - is eating
+Philosopher (2) - time 1460296621097 - is thinking
+Philosopher (4) - time 1460296622769 - is thinking
+Philosopher (5) - time 1460296623425 - is eating
+^CPhilosopher (0) used the CPU 7.300 sec.
+Philosopher (1) used the CPU 6.300 sec.
+Philosopher (2) used the CPU 6.0 sec.
+Philosopher (3) used the CPU 6.100 sec.
+Philosopher (4) used the CPU 6.400 sec.
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ exit
+exit
+Script done, file is typescript
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ gedit typescript &
+[1] 7616
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ cat typescript | grep "Philosopher (1)"
+Philosopher (1) - time 1460296592951 - is thinking
+Philosopher (1) - time 1460296603635 - is hungry
+Philosopher (1) - time 1460296606650 - is eating
+Philosopher (1) - time 1460296611993 - is thinking
+[1]+  Done                    gedit typescript
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ cat typescript | grep "Philosopher (2)"
+Philosopher (2) - time 1460296593951 - is thinking
+Philosopher (2) - time 1460296599294 - is hungry
+Philosopher (2) - time 1460296599294 - is eating
+Philosopher (2) - time 1460296608007 - is thinking
+Philosopher (2) - time 1460296617054 - is hungry
+Philosopher (2) - time 1460296620425 - is eating
+Philosopher (2) - time 1460296621097 - is thinking
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ cat typescript | grep "Philosopher (3)"
+Philosopher (3) - time 1460296594951 - is thinking
+Philosopher (3) - time 1460296604650 - is hungry
+Philosopher (3) - time 1460296608650 - is eating
+Philosopher (3) - time 1460296617067 - is thinking
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ cat typescript | grep "Philosopher (4)"
+Philosopher (4) - time 1460296595951 - is thinking
+Philosopher (4) - time 1460296596622 - is hungry
+Philosopher (4) - time 1460296596622 - is eating
+Philosopher (4) - time 1460296610013 - is thinking
+Philosopher (4) - time 1460296614685 - is hungry
+Philosopher (4) - time 1460296618054 - is eating
+Philosopher (4) - time 1460296622769 - is thinking
+datos@datos-ThinkPad-T410:~/Downloads/assingment maman11$ cat typescript | grep "Philosopher (5)"
+Philosopher (5) - time 1460296596951 - is thinking
+Philosopher (5) - time 1460296597622 - is hungry
+Philosopher (5) - time 1460296597622 - is eating
+Philosopher (5) - time 1460296605662 - is thinking
+Philosopher (5) - time 1460296619425 - is hungry
+Philosopher (5) - time 1460296623425 - is eating
+
