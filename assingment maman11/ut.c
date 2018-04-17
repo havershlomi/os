@@ -1,3 +1,9 @@
+//********************************************
+// this file defines a simple library for creating & scheduling
+//             user-level threads.
+// Name:  Shlomi Haver
+// ID: 204096648
+//********************************************
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -21,7 +27,7 @@ int ut_init(int tab_size){
     threads_table = (ut_slot_t*)malloc(tab_size * sizeof(ut_slot_t));
     if(!threads_table)
         return SYS_ERR;
-
+    //set the table size
     threads_table_size = tab_size;
     thread_index = 0;
     return 0;
@@ -112,6 +118,7 @@ int ut_start(void){
 }
 
 unsigned long ut_get_vtime(tid_t tid){
+    //get the right slot and return the value of time
     ut_slot_t s = threads_table[tid];
     return (s.vtime);
 }
